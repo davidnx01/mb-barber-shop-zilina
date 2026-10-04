@@ -1,0 +1,356 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>MB Barber Shop · barbershop v Žiline — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh homepage pre MB Barber Shop, Veľký diel 3323, Žilina — strihy, brada, holenie britvou. Ukážka od webdavid.sk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400&family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --spruce:#1B2925;--spruce-2:#22342E;--spruce-3:#2B413A;
+  --linen:#ECE7DC;--linen-dim:rgba(236,231,220,.72);--hair:rgba(236,231,220,.16);
+  --brass:#C9A35B;--brass-dk:#9C7A3A;--brass-lt:#E5C98E;
+  --silk:#7A2533;--silk-dk:#5E1A26;--navy:#2C3D5C;--mustard:#B98B30;
+  --tag:#F3EEE3;--tag-ink:#1B2925;--tag-hair:rgba(27,41,37,.18);
+  --sc:"Playfair Display SC",Georgia,serif;--sans:"Epilogue",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--spruce);color:var(--linen);font:400 16px/1.6 var(--sans);padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass-lt);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.notice{background:var(--linen);color:var(--spruce);font:500 13px/1.45 var(--sans);text-align:center;padding:9px 16px}
+.notice b{font-weight:700}
+
+/* header */
+.top{border-bottom:1px solid var(--hair)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:76px}
+.mark{display:flex;align-items:baseline;gap:10px;text-decoration:none;margin-right:auto}
+.mark b{font:700 27px/1 var(--sc);letter-spacing:.02em}
+.mark span{font:600 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.top nav{display:flex;gap:24px}
+.top nav a,.phone{font:500 14px/1 var(--sans);text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding:6px 0;transition:background-size .2s}
+.top nav a:hover,.phone:hover{background-size:100% 1px}
+.phone{font-variant-numeric:tabular-nums;color:var(--linen-dim)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;font:600 14px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid var(--brass);color:var(--spruce);background:var(--brass);transition:background .2s,color .2s}
+.btn:hover{background:var(--brass-lt)}
+.btn.ghost{background:transparent;color:var(--linen);border-color:var(--hair)}
+.btn.ghost:hover{border-color:var(--brass);color:var(--brass-lt)}
+.top .btn{min-height:44px;padding:0 18px;font-size:13px}
+
+/* hero — the rack */
+.hero{position:relative;overflow:hidden;min-height:min(600px,82vh)}
+.rod{position:absolute;left:0;right:0;top:34px;height:12px;background:linear-gradient(180deg,var(--brass-lt),var(--brass) 45%,var(--brass-dk));box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.rod::before,.rod::after{content:"";position:absolute;top:-9px;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--brass-lt),var(--brass-dk) 70%)}
+.rod::before{left:calc(50% - 590px - 6px)}.rod::after{right:calc(50% - 590px - 6px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.02fr 1fr;gap:40px;padding:84px 0 64px}
+.kicker{font:600 12px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+h1{font:400 clamp(46px,6.6vw,88px)/.95 var(--sc);letter-spacing:-.01em;margin:18px 0 22px}
+h1 em{font-style:italic;color:var(--brass-lt)}
+.lead{font-size:18px;line-height:1.6;color:var(--linen-dim);max-width:34em}
+.lead q{color:var(--linen);quotes:"„" "“"}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 34px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:0;border-top:1px solid var(--hair);max-width:560px}
+.facts div{padding:16px 18px 0 0}
+.facts div+div{padding-left:18px;border-left:1px solid var(--hair)}
+.facts b{display:block;font:600 22px/1.1 var(--sans);font-variant-numeric:tabular-nums;color:var(--linen)}
+.facts span{font-size:13px;color:var(--linen-dim);line-height:1.35;display:block;margin-top:4px}
+
+.hang{position:relative;min-height:470px;margin-top:-84px}
+.tie{position:absolute;top:0;width:84px;filter:drop-shadow(6px 10px 10px rgba(0,0,0,.28))}
+.tie svg{display:block;width:100%;height:auto}
+.tie.t1{left:2%}.tie.t2{left:74%}.tie.t3{left:88%;width:62px}
+.tag-s{position:absolute;left:50%;transform:translateX(-50%) rotate(-4deg);background:var(--tag);color:var(--tag-ink);padding:14px 10px 9px;width:112px;text-align:center;clip-path:polygon(16% 0,84% 0,100% 14%,100% 100%,0 100%,0 14%)}
+.tag-s::before{content:"";position:absolute;left:50%;top:6px;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--spruce);box-shadow:0 0 0 2px var(--brass)}
+.tag-s small{display:block;font:600 10px/1.25 var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+.tag-s b{display:block;font:700 22px/1.1 var(--sans);font-variant-numeric:tabular-nums;margin-top:3px}
+.t1 .tag-s{top:318px}.t2 .tag-s{top:262px;transform:translateX(-50%) rotate(5deg)}
+.string{position:absolute;left:50%;width:1px;background:var(--linen-dim)}
+.t1 .string{top:296px;height:26px}.t2 .string{top:242px;height:24px}
+.photo-hang{position:absolute;left:19%;top:0;width:min(400px,52%)}
+.photo-hang .cords{display:block;width:100%;height:78px}
+.photo-hang figure{background:var(--tag);padding:10px 10px 12px;box-shadow:10px 16px 26px rgba(0,0,0,.32);transform:rotate(1.2deg)}
+.photo-hang img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.photo-hang figcaption{font:500 12px/1.3 var(--sans);color:var(--tag-ink);padding-top:9px;display:flex;justify-content:space-between;gap:10px}
+
+/* sections */
+section{scroll-margin-top:20px}
+.head{display:flex;align-items:center;gap:18px;margin-bottom:38px}
+.head svg{flex:none;width:58px;height:auto}
+.head h2{font:400 clamp(32px,4.2vw,50px)/1 var(--sc)}
+.head p{font:600 12px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:6px}
+
+/* price list — silk panel with tags */
+.pricing{position:relative;background:var(--silk) repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 6px,transparent 6px 14px);padding:78px 0 84px}
+.pricing .head p{color:var(--brass-lt)}
+.rail{height:8px;background:linear-gradient(180deg,var(--brass-lt),var(--brass-dk));margin-bottom:0;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.tags{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 26px}
+.tags li{position:relative;padding-top:34px}
+.tags li::before{content:"";position:absolute;left:50%;top:0;height:42px;width:1px;background:rgba(236,231,220,.6)}
+.tags li:nth-child(3n+2)::before{height:30px}.tags li:nth-child(3n+2){padding-top:22px}
+.tg{position:relative;background:var(--tag);color:var(--tag-ink);padding:30px 24px 20px;clip-path:polygon(9% 0,91% 0,100% 18px,100% 100%,0 100%,0 18px);display:grid;grid-template-columns:1fr auto;gap:2px 16px;align-items:end;min-height:136px;margin-bottom:22px}
+.tg::before{content:"";position:absolute;left:50%;top:10px;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--silk-dk);box-shadow:0 0 0 2px var(--brass)}
+.tg h3{font:600 17px/1.25 var(--sans);grid-column:1/-1;align-self:start}
+.tg span{font-size:13px;color:rgba(27,41,37,.66);font-variant-numeric:tabular-nums}
+.tg b{font:700 28px/1 var(--sans);font-variant-numeric:tabular-nums;letter-spacing:-.01em;white-space:nowrap}
+.tg.wide b{font-size:24px}
+.note{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 30px;align-items:center;margin-top:18px;padding-top:22px;border-top:1px solid rgba(236,231,220,.22);font-size:14px;color:rgba(236,231,220,.82)}
+.note .btn{background:var(--tag);border-color:var(--tag);color:var(--silk-dk)}
+.note .btn:hover{background:#fff}
+
+/* salon */
+.salon{padding:92px 0 40px}
+.salon .grid{display:grid;grid-template-columns:7fr 5fr;gap:30px 64px;align-items:end}
+.salon .hangers{grid-column:1/-1;margin-top:40px}
+.quote{font:400 clamp(22px,2.4vw,30px)/1.4 var(--sc);color:var(--linen)}
+.quote::before{content:"„";color:var(--brass)}.quote::after{content:"“";color:var(--brass)}
+.quote-src{margin-top:16px;font-size:14px;color:var(--linen-dim)}
+.svc{border-top:1px solid var(--hair)}
+.svc li{list-style:none;display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--hair);font-size:15px}
+.svc li span{color:var(--linen-dim)}
+.hangers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;padding-top:6px}
+.hangers::before{content:"";position:absolute;left:-8px;right:-8px;top:0;height:7px;background:linear-gradient(180deg,var(--brass-lt),var(--brass-dk))}
+.hangers figure{position:relative}
+.hangers svg{display:block;width:70%;height:auto;margin:-6px auto 0}
+.hangers .ph{overflow:hidden;background:var(--spruce-2);margin-top:-2px}
+.hangers img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s}
+.hangers figure:hover img{transform:scale(1.045)}
+.hangers figcaption{font-size:13px;color:var(--linen-dim);margin-top:10px;line-height:1.4}
+
+/* visit */
+.visit{padding:70px 0 96px}
+.card{display:grid;grid-template-columns:1.1fr 1fr 1fr;border:1px solid var(--hair);background:var(--spruce-2)}
+.card>div{padding:34px 32px}
+.card>div+div{border-left:1px solid var(--hair)}
+.lbl{font:600 11px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:12px}
+.card address{font-style:normal;font-size:18px;line-height:1.5}
+.card p{color:var(--linen-dim);font-size:15px;margin-top:10px}
+.big{font:600 24px/1.2 var(--sans);font-variant-numeric:tabular-nums;text-decoration:none;display:inline-block;padding:4px 0;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.big:hover{background-size:100% 1px}
+.links{display:flex;flex-direction:column;gap:2px;margin-top:14px}
+.links a{display:flex;align-items:center;min-height:44px;font-weight:500;text-decoration:none;border-bottom:1px solid var(--hair);justify-content:space-between}
+.links a::after{content:"↗";color:var(--brass)}
+.links a:hover{color:var(--brass-lt)}
+
+footer{border-top:1px solid var(--hair);padding:28px 0 34px;font-size:13px;color:var(--linen-dim)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(27,41,37,.96);border-top:1px solid var(--hair)}
+.mbar a{min-height:50px;display:flex;align-items:center;justify-content:center;font:600 15px/1 var(--sans);text-decoration:none;letter-spacing:.03em}
+.mbar a:first-child{background:var(--brass);color:var(--spruce)}
+.mbar a:last-child{border:1px solid var(--linen-dim)}
+
+@media (max-width:1000px){
+  .top nav{display:none}
+  .hero .wrap{grid-template-columns:1fr;padding-top:76px}
+  .hang{margin-top:0;min-height:520px;max-width:600px;width:100%;margin-inline:auto;padding-top:14px}
+  .hang::before{content:"";position:absolute;left:-16px;right:-16px;top:0;height:9px;background:linear-gradient(180deg,var(--brass-lt),var(--brass) 45%,var(--brass-dk));box-shadow:0 3px 0 rgba(0,0,0,.25)}
+  .rod::before{left:-10px}.rod::after{right:-10px}
+  .salon .grid{grid-template-columns:1fr}.salon .hangers{margin-top:20px}
+  .card{grid-template-columns:1fr 1fr}.card>div:first-child{grid-column:1/-1}.card>div+div{border-left:0;border-top:1px solid var(--hair)}.card>div:last-child{border-left:1px solid var(--hair)}
+}
+@media (max-width:720px){
+  body{font-size:15.5px}
+  .wrap{width:calc(100% - 32px)}
+  .top .wrap{min-height:64px;gap:12px}
+  .mark b{font-size:23px}.mark span{display:none}
+  .phone{display:none}
+  .hero{min-height:0}
+  .rod{top:26px;height:10px}
+  .hero .wrap{padding:62px 0 44px;gap:26px}
+  h1{margin:14px 0 18px}
+  .lead{font-size:16.5px}
+  .cta .btn{flex:1 1 100%}
+  .facts{grid-template-columns:1fr 1fr 1fr}
+  .facts div{padding:14px 10px 0 0}.facts div+div{padding-left:10px}
+  .facts b{font-size:18px}.facts span{font-size:12px}
+  .hang{min-height:410px;margin-top:6px}
+  .tags li:last-child{grid-column:1/-1}
+  .photo-hang{left:auto;right:4%;width:60%}
+  .photo-hang .cords{height:50px}
+  .tie{width:58px}.tie.t1{left:3%}.tie.t2{left:25%;top:0}.tie.t3{display:none}
+  .t1 .tag-s{top:244px}.t1 .string{top:226px;height:22px}
+  .t2 .tag-s{top:300px}.t2 .string{top:184px;height:120px}
+  .tag-s{width:96px;padding:13px 6px 8px}.tag-s b{font-size:19px}
+  .pricing{padding:60px 0 64px}
+  .tags{grid-template-columns:1fr 1fr;gap:0 12px}
+  .tags li:nth-child(3n+2)::before{height:42px}.tags li:nth-child(3n+2){padding-top:34px}
+  .tags li:nth-child(even)::before{height:28px}.tags li:nth-child(even){padding-top:20px}
+  .tg{padding:28px 14px 16px;grid-template-columns:1fr;min-height:150px;margin-bottom:14px}
+  .tg h3{font-size:15px}
+  .tg b{font-size:24px}.tg.wide b{font-size:19px}
+  .head{gap:12px;margin-bottom:28px}.head svg{width:42px}
+  .salon{padding:64px 0 24px}
+  .hangers{grid-template-columns:1fr 1fr;gap:14px}
+  .hangers::before{display:none}
+  .hangers figure{padding-top:6px}
+  .hangers figure::before{content:"";position:absolute;left:-8px;right:-8px;top:0;height:6px;background:linear-gradient(180deg,var(--brass-lt),var(--brass-dk))}
+  .hangers figure:nth-child(n+3){margin-top:16px}
+  .visit{padding:52px 0 64px}
+  .card{grid-template-columns:1fr}.card>div{padding:26px 20px}.card>div:last-child{border-left:0}
+  .mbar{display:grid}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="notice"><b>Neoficiálny návrh</b> — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#"><b>MB Barber</b><span>Shop · Žilina</span></a>
+    <nav aria-label="Hlavná navigácia"><a href="#cennik">Cenník</a><a href="#salon">Salón</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="phone" href="tel:+421902733016">0902 733 016</a>
+    <a class="btn" href="https://www.notino.sk/salony/mb-barber-shop/" target="_blank" rel="noopener">Rezervovať</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="rod" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <p class="kicker">Barbershop · Veľký diel · Žilina</p>
+      <h1 id="h1">MB Barber <em>Shop</em></h1>
+      <p class="lead">Pánske strihy, brada, holenie hlavy britvou aj strih pre otca so synom. Z profilu salónu: <q>…aby ste si užili príjemne strávený čas</q>.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.notino.sk/salony/mb-barber-shop/" target="_blank" rel="noopener">Rezervovať na Notino</a>
+        <a class="btn ghost" href="tel:+421902733016">Zavolať 0902 733 016</a>
+      </div>
+      <div class="facts">
+        <div><b>5,0 ★</b><span>Notino · 91 hodnotení</span></div>
+        <div><b>1. posch.</b><span>budova Výskumného ústavu dopravného</span></div>
+        <div><b>Na objednanie</b><span>termín cez Notino alebo telefón</span></div>
+      </div>
+    </div>
+
+    <div class="hang" aria-hidden="false">
+      <div class="tie t1" aria-hidden="true">
+        <svg viewBox="0 0 80 300"><defs><pattern id="st" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="12" height="12" fill="#7A2533"/><rect width="3" height="12" fill="#C9A35B"/></pattern></defs><path d="M44 14 L52 14 L55 190 L48 204 L41 190 Z" fill="#5E1A26"/><path d="M27 12 Q40 2 53 12 L60 258 L40 292 L20 258 Z" fill="url(#st)"/><path d="M27 12 Q40 2 53 12 L54 36 Q40 30 26 36 Z" fill="rgba(0,0,0,.22)"/></svg>
+        <span class="string"></span>
+        <div class="tag-s"><small>Pánsky strih</small><b>18 €</b></div>
+      </div>
+      <div class="photo-hang">
+        <svg class="cords" viewBox="0 0 400 78" preserveAspectRatio="none" aria-hidden="true"><path d="M200 2 L40 76 M200 2 L360 76" stroke="#ECE7DC" stroke-opacity=".7" stroke-width="1.2" fill="none" vector-effect="non-scaling-stroke"/><circle cx="200" cy="6" r="5" fill="none" stroke="#C9A35B" stroke-width="2"/></svg>
+        <figure>
+          <img src="assets/strih-fade-zozadu.webp" width="640" height="640" alt="Krátky pánsky strih s vysokým prechodom, pohľad zozadu v salóne" fetchpriority="high">
+          <figcaption><span>Strih s prechodom</span><span>@mb_barber_za</span></figcaption>
+        </figure>
+      </div>
+      <div class="tie t2" aria-hidden="true">
+        <svg viewBox="0 0 80 300"><defs><pattern id="dt" width="11" height="11" patternUnits="userSpaceOnUse"><rect width="11" height="11" fill="#2C3D5C"/><circle cx="5.5" cy="5.5" r="1.6" fill="#ECE7DC"/></pattern></defs><path d="M30 14 L38 14 L40 168 L33 180 L26 168 Z" fill="#1E2B42"/><path d="M27 12 Q40 2 53 12 L58 214 L40 244 L22 214 Z" fill="url(#dt)"/><path d="M27 12 Q40 2 53 12 L54 34 Q40 28 26 34 Z" fill="rgba(0,0,0,.25)"/></svg>
+        <span class="string"></span>
+        <div class="tag-s"><small>Úprava brady</small><b>15 €</b></div>
+      </div>
+      <div class="tie t3" aria-hidden="true">
+        <svg viewBox="0 0 80 300"><defs><pattern id="mt" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)"><rect width="16" height="16" fill="#B98B30"/><rect width="2" height="16" fill="#7A2533"/><rect x="6" width="1" height="16" fill="#7A2533"/></pattern></defs><path d="M27 12 Q40 2 53 12 L58 170 L40 198 L22 170 Z" fill="url(#mt)"/><path d="M27 12 Q40 2 53 12 L54 32 Q40 27 26 32 Z" fill="rgba(0,0,0,.22)"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="cennik" aria-labelledby="h-cennik">
+  <div class="wrap">
+    <div class="head">
+      <svg viewBox="0 0 60 30" aria-hidden="true"><path d="M2 3 L26 13 L26 17 L2 27 Z M58 3 L34 13 L34 17 L58 27 Z" fill="#E5C98E"/><rect x="25" y="10" width="10" height="10" rx="2" fill="#C9A35B"/></svg>
+      <div><p>Visačky s cenami</p><h2 id="h-cennik">Cenník</h2></div>
+    </div>
+    <div class="rail" aria-hidden="true"></div>
+    <ul class="tags">
+      <li><div class="tg"><h3>Pánsky strih</h3><span>30 min</span><b>18 €</b></div></li>
+      <li><div class="tg"><h3>Pánsky strih + úprava fúzov</h3><span>1 h</span><b>23 €</b></div></li>
+      <li><div class="tg"><h3>Úprava brady</h3><span>30 min</span><b>15 €</b></div></li>
+      <li><div class="tg"><h3>Holenie hlavy britvou</h3><span>30 min</span><b>15 €</b></div></li>
+      <li><div class="tg"><h3>Junior strih (do 12 rokov)</h3><span>30 min</span><b>15 €</b></div></li>
+      <li><div class="tg wide"><h3>Strih otec a syn</h3><span>1 h</span><b>30–36 €</b></div></li>
+      <li><div class="tg wide"><h3>Melír so strihom</h3><span>50 min – 2 h</span><b>30–50 €</b></div></li>
+      <li><div class="tg"><h3>Kozmetické / pánske ošetrenie</h3><span>45 min</span><b>20 €</b></div></li>
+      <li><div class="tg"><h3>Masáž hlavy</h3><span>10 min</span><b>5 €</b></div></li>
+    </ul>
+    <div class="note">
+      <p>Ceny a trvanie podľa profilu salónu na Notino (4. 10. 2026) — pred zverejnením overiť.</p>
+      <a class="btn" href="https://www.notino.sk/salony/mb-barber-shop/" target="_blank" rel="noopener">Vybrať termín</a>
+    </div>
+  </div>
+</section>
+
+<section class="salon" id="salon" aria-labelledby="h-salon">
+  <div class="wrap">
+    <div class="head">
+      <svg viewBox="0 0 60 30" aria-hidden="true"><path d="M30 2 a5 5 0 1 1 5 5 v4 L58 26 H2 L25 11" fill="none" stroke="#C9A35B" stroke-width="2.4" stroke-linejoin="round"/></svg>
+      <div><p>Salón</p><h2 id="h-salon">Na vešiaku</h2></div>
+    </div>
+    <div class="grid">
+      <div>
+        <p class="quote">…si zakladám nielen na tom, aby som poskytovala tie najkvalitnejšie služby, ale aj na tom, aby ste si užili príjemne strávený čas</p>
+        <p class="quote-src">— z popisu salónu na Notino</p>
+      </div>
+      <div>
+        <ul class="svc">
+          <li>Hodnotenie <span>5,0 / 5 · 91 hodnotení · Notino, 4. 10. 2026</span></li>
+          <li>Kde <span>1. poschodie, budova VÚD</span></li>
+          <li>Parkovanie <span>bezplatné, pred budovou</span></li>
+          <li>Termíny <span>na objednanie</span></li>
+        </ul>
+      </div>
+      <div class="hangers">
+        <figure>
+          <svg viewBox="0 0 120 50" aria-hidden="true"><path d="M60 0 v6 a6 6 0 1 1-6 6 M60 18 L114 46 H6 Z" fill="none" stroke="#C9A35B" stroke-width="3" stroke-linejoin="round"/></svg>
+          <div class="ph"><img src="assets/interier-salonu.webp" width="480" height="640" loading="lazy" alt="Interiér salónu MB Barber večer so šesťuholníkovým svetlom a kreslom"></div>
+          <figcaption>Salón na 1. poschodí</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 120 50" aria-hidden="true"><path d="M60 0 v6 a6 6 0 1 1-6 6 M60 18 L114 46 H6 Z" fill="none" stroke="#C9A35B" stroke-width="3" stroke-linejoin="round"/></svg>
+          <div class="ph"><img src="assets/strih-skin-fade.webp" width="512" height="640" loading="lazy" alt="Pánsky strih s prechodom a textúrovaným vrchom, pohľad z boku zozadu"></div>
+          <figcaption>Prechod a textúra navrchu</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 120 50" aria-hidden="true"><path d="M60 0 v6 a6 6 0 1 1-6 6 M60 18 L114 46 H6 Z" fill="none" stroke="#C9A35B" stroke-width="3" stroke-linejoin="round"/></svg>
+          <div class="ph"><img src="assets/detail-strojcek-a-hreben.webp" width="290" height="370" loading="lazy" alt="Detail práce: červený hrebeň a strojček pri úprave brady"></div>
+          <figcaption>Úprava brady</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 120 50" aria-hidden="true"><path d="M60 0 v6 a6 6 0 1 1-6 6 M60 18 L114 46 H6 Z" fill="none" stroke="#C9A35B" stroke-width="3" stroke-linejoin="round"/></svg>
+          <div class="ph"><img src="assets/strih-zosvetleny-vrch.webp" width="512" height="640" loading="lazy" alt="Zosvetlený vrch s vyholenou linkou a prechodom, pohľad zozadu"></div>
+          <figcaption>Zosvetlenie so strihom</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div class="head">
+      <svg viewBox="0 0 60 30" aria-hidden="true"><path d="M8 4 H44 L56 15 L44 26 H8 Z" fill="none" stroke="#C9A35B" stroke-width="2.4"/><circle cx="44" cy="15" r="3" fill="#C9A35B"/></svg>
+      <div><p>Kontakt</p><h2 id="h-kontakt">Ako nás nájdete</h2></div>
+    </div>
+    <div class="card">
+      <div>
+        <p class="lbl">Adresa</p>
+        <address>Veľký diel 3323<br>010 08 Žilina</address>
+        <p>Budova Výskumného ústavu dopravného, 1. poschodie. Pred budovou je bezplatné parkovanie (podľa profilu na Notino).</p>
+        <div class="links"><a href="https://www.google.com/maps/search/MB+Barber+Shop+Veľký+diel+3323+Žilina" target="_blank" rel="noopener">Otvoriť v Google Maps</a></div>
+      </div>
+      <div>
+        <p class="lbl">Objednávky</p>
+        <a class="big" href="tel:+421902733016">+421 902 733 016</a>
+        <p>Otvorené na objednanie — pevné otváracie hodiny salón nezverejňuje.</p>
+        <div class="links"><a href="https://www.notino.sk/salony/mb-barber-shop/" target="_blank" rel="noopener">Rezervácia na Notino</a></div>
+      </div>
+      <div>
+        <p class="lbl">Sledujte</p>
+        <a class="big" href="https://www.instagram.com/mb_barber_za" target="_blank" rel="noopener">@mb_barber_za</a>
+        <p>Ukážky strihov a práce v salóne.</p>
+        <div class="links"><a href="https://www.instagram.com/mb_barber_za" target="_blank" rel="noopener">Instagram</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Neoficiálny návrh webu · webdavid.sk · 2026</span><span>MB Barber Shop · Veľký diel 3323, Žilina</span></div></footer>
+
+<nav class="mbar" aria-label="Rýchle akcie"><a href="tel:+421902733016">Zavolať</a><a href="https://www.notino.sk/salony/mb-barber-shop/" target="_blank" rel="noopener">Rezervovať</a></nav>
